@@ -5,7 +5,7 @@
 <h1>this is about page</h1>
 <p>page title is: <b>{{ title }}</b></p>
 <hr>
-<form action="post">
+<form action="/about" method="POST">
     {{ form.csrf_token }}
     {{ form.title.label }}
     {{ form.title }}
