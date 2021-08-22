@@ -4,4 +4,11 @@
 {% block page_content %}
 <h1>this is about page</h1>
 <p>page title is: <b>{{ title }}</b></p>
+<hr>
+<form action="post">
+    {{ form.csrf_token }}
+    {{ form.title.label }}
+    {{ form.title }}
+    {{ form.submit }}
+</form>
 {% endblock page_content %}
