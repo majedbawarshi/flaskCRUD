@@ -16,4 +16,5 @@ def about():
     if form.validate_on_submit():
         # this message will be printed on the cmd panel when a form is submitted.
         print('Information has been submitted.\nThe data are', form.title.data)
+        return render_template('about.html', form=form, title=form.title.data)
     return render_template('about.html', title='about', form=form)
