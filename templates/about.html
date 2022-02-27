@@ -1,0 +1,20 @@
+
+{% extends "page_template.html" %}
+
+{% block page_content %}
+<h1>this is about page</h1>
+<p>page title is: <b>{{ title }}</b></p>
+<hr>
+<form action="/about" method="POST">
+    {{ form.csrf_token }}
+    {{ form.title.label }}
+    {{ form.title }}
+    {{ form.submit }}
+</form>
+
+{% if title %}
+    <h2>recived title is:</h2>
+    <h1>{{ title }}</h1>
+{% endif %}
+
+{% endblock page_content %}
